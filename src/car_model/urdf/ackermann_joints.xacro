@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!-- Code for ackermann joints -->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:property name="ackermann_joint_radius" value="0.035"/>
+	<xacro:property name="ackermann_joint_length" value="0.06"/>
+
+	<xacro:macro name="ackermann_joint" params="suffix *origin">
+		<joint name="${suffix}_wheel_steering_joint" type="revolute">
+			<xacro:insert_block name="origin"/>
+			<parent link="base_link" />
+			<child link="${suffix}_wheel_steering_link" />
+			<axis xyz="0 0 1" />
+			<!-- change effort after you we know the value of torquw -->
+			<limit lower="${radians(-14.3)}" upper="${radians(14.3)}" velocity="5.56" effort="100" />
+		</joint>
+
+		<link name="${suffix}_wheel_steering_link">
+			<visual>
+				<geometry>
+					<cylinder radius="${ackermann_joint_radius}" length="${ackermann_joint_length}" />
+				</geometry>
+				<origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+				<!-- Make it transparent later -->
+				<material name="white">
+					<color rgba="0 0 0 0.25"/>
+				</material>
+			</visual>
+			<!-- Change to sphere later if the car drives a bit rough -->
+			<collision>
+				<geometry>
+					<cylinder radius="${ackermann_joint_radius}" length="${ackermann_joint_length}" />
+				</geometry>
+				<origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+			</collision>
+			<inertial>
+				<mass value="0.5"/>
+				<origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+				<inertia ixx="7.62e-04" ixy="0.0" ixz="0.0" iyy="7.62e-04" iyz="0.0" izz="1.225e-03" />
+			</inertial>
+		</link>
+	</xacro:macro>
+</robot>

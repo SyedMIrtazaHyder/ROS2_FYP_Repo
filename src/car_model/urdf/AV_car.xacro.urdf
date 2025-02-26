@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<robot name="FYP_car" xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:include filename="wheel.xacro" />
+	<xacro:include filename="ackermann_joints.xacro" />
+
+	<xacro:property name="ground_clearance" value="0.13" />
+	<xacro:property name="chassis_height" value="1.5" />
+	<xacro:property name="chassis_width_top" value="1.0" />
+	<xacro:property name="chassis_width_bottom" value="0.80" />
+	<xacro:property name="chassis_length" value="2.6" />
+	<xacro:property name="arc_distance" value="0.05" />
+	<xacro:property name="front_wheel_to_center" value="0.45" />
+	<xacro:property name="back_wheel_to_center" value="0.65" />
+
+	<link name = "world_link" />
+
+	<joint name="base_joint" type="fixed">
+		<parent link="world_link" />
+		<child link="base_link" />
+		<origin xyz="0 0 ${ground_clearance}" />
+	</joint>
+
+	<link name="base_link">
+		<visual>
+			<origin xyz="${chassis_length/4} 0 ${chassis_height/2}" />
+			<geometry>
+				<box size="${chassis_length/2 - arc_distance} ${chassis_width_top} ${chassis_height}"/>
+			</geometry>
+		</visual>
+		<visual>
+			<origin xyz="${-chassis_length/4} 0 ${chassis_height/2}" />
+			<geometry>
+				<box size="1.35 0.8 1.5"/>
+			</geometry>
+		</visual>
+		<collision>
+			<origin xyz="0 0 ${chassis_height/2}" />
+			<geometry>
+				<box size="${chassis_length} ${chassis_width_bottom} ${chassis_height}"/>
+			</geometry>
+		</collision>
+	</link>
+
+	<xacro:ackermann_joint suffix="front_left">
+		<origin xyz="${front_wheel_to_center + radius} ${chassis_width_top/2} ${radius - ground_clearance}" rpy="0 0 0"/>
+	</xacro:ackermann_joint>
+	<xacro:wheel suffix="front" direction="left" parent="front_left_wheel_steering_link">
+		<origin xyz="0 ${thickness} 0" rpy="${-pi/2} 0 0"/>
+	</xacro:wheel>
+
+	<xacro:ackermann_joint suffix="front_right">
+		<origin xyz="${front_wheel_to_center + radius} ${-chassis_width_top/2} ${radius - ground_clearance}" rpy="0 0 0"/>
+	</xacro:ackermann_joint>
+	<xacro:wheel suffix="front" direction="right" parent="front_right_wheel_steering_link">
+		<origin xyz="0 ${-thickness} 0" rpy="${pi/2} 0 0"/>
+	</xacro:wheel>
+
+	<xacro:wheel suffix="back" direction="left" parent="base_link">
+		<origin xyz="${-(back_wheel_to_center + radius)} ${chassis_width_bottom/2 + thickness} ${radius - ground_clearance}" rpy="${-pi/2} 0 0"/>
+	</xacro:wheel>
+	
+	<xacro:wheel suffix="back" direction="right" parent="base_link">
+		<origin xyz="${-(back_wheel_to_center + radius)} ${-(chassis_width_bottom/2 + thickness)} ${radius - ground_clearance}" rpy="${pi/2} 0 0"/>
+	</xacro:wheel>
+</robot>
