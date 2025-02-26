@@ -50,6 +50,11 @@
 				<box size="${chassis_length} ${chassis_width_bottom} ${chassis_height}"/>
 			</geometry>
 		</collision>
+		<inertial>
+			<mass value="100" />
+			<origin xyz="0 0 ${chassis_height/2}" />
+			<inertia ixx="24.1" ixy="0" ixz="0" iyy="75.08" iyz="0" izz="61.67"/>
+		</inertial>
 	</link>
 
 	<xacro:ackermann_joint suffix="front_left">

@@ -37,15 +37,10 @@ def generate_launch_description():
                  'use_sim_time': LaunchConfiguration('use_sim_time')}]
             )
 
-    joint_state_publisher = Node(
-            package="joint_state_publisher",
-            executable="joint_state_publisher"
-            )
 
     ld.add_action(rviz_config)
     ld.add_action(urdf)
     ld.add_action(use_sim_time)
     ld.add_action(rviz2)
     ld.add_action(robot_state_publisher)
-    ld.add_action(joint_state_publisher)
     return ld
