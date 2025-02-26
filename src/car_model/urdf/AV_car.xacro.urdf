@@ -12,15 +12,25 @@
 	<xacro:property name="front_wheel_to_center" value="0.45" />
 	<xacro:property name="back_wheel_to_center" value="0.65" />
 
-	<link name = "world_link" />
+	<link name = "base_link" />
 
 	<joint name="base_joint" type="fixed">
-		<parent link="world_link" />
-		<child link="base_link" />
-		<origin xyz="0 0 ${ground_clearance}" />
+		<parent link="base_link" />
+		<child link="chassis_link" />
+		<origin xyz="0 0 ${ground_clearance}"/>
 	</joint>
 
-	<link name="base_link">
+	<link name="chassis_link">
+		<visual>
+			<origin xyz="0 ${-chassis_width_top/3} ${chassis_height/2}" rpy="${pi/2} 0 ${pi/2}"/>
+			<geometry>
+				<mesh filename="package://car_model/meshes/chassis.stl" scale="0.002 0.001 0.001"/>
+			</geometry>
+			<material name="grey">
+				<color rgba="0.5 0.5 0.5 0.8" />
+			</material>
+		</visual>
+		<!--
 		<visual>
 			<origin xyz="${chassis_length/4} 0 ${chassis_height/2}" />
 			<geometry>
@@ -33,6 +43,7 @@
 				<box size="1.35 0.8 1.5"/>
 			</geometry>
 		</visual>
+		-->
 		<collision>
 			<origin xyz="0 0 ${chassis_height/2}" />
 			<geometry>
@@ -55,11 +66,11 @@
 		<origin xyz="0 ${-thickness} 0" rpy="${pi/2} 0 0"/>
 	</xacro:wheel>
 
-	<xacro:wheel suffix="back" direction="left" parent="base_link">
+	<xacro:wheel suffix="back" direction="left" parent="chassis_link">
 		<origin xyz="${-(back_wheel_to_center + radius)} ${chassis_width_bottom/2 + thickness} ${radius - ground_clearance}" rpy="${-pi/2} 0 0"/>
 	</xacro:wheel>
 	
-	<xacro:wheel suffix="back" direction="right" parent="base_link">
+	<xacro:wheel suffix="back" direction="right" parent="chassis_link">
 		<origin xyz="${-(back_wheel_to_center + radius)} ${-(chassis_width_bottom/2 + thickness)} ${radius - ground_clearance}" rpy="${pi/2} 0 0"/>
 	</xacro:wheel>
 </robot>

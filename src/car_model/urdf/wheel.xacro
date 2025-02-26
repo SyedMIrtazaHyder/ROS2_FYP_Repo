@@ -18,8 +18,8 @@
 					<cylinder radius="${radius}" length="${thickness}" />
 				</geometry>
 				<origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
-				<material name="blue">
-					<color rgba="0 0.5 0.25 0.5"/>
+				<material name="black">
+					<color rgba="0 0 0 0.5"/>
 				</material>
 			</visual>
 					<!-- Change to sphere later if the car drives a bit rough -->

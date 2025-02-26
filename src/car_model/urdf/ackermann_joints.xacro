@@ -7,7 +7,7 @@
 	<xacro:macro name="ackermann_joint" params="suffix *origin">
 		<joint name="${suffix}_wheel_steering_joint" type="revolute">
 			<xacro:insert_block name="origin"/>
-			<parent link="base_link" />
+			<parent link="chassis_link" />
 			<child link="${suffix}_wheel_steering_link" />
 			<axis xyz="0 0 1" />
 			<!-- change effort after you we know the value of torquw -->
