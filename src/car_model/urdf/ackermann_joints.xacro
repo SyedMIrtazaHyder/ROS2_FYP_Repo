@@ -11,7 +11,7 @@
 			<child link="${suffix}_wheel_steering_link" />
 			<axis xyz="0 0 1" />
 			<!-- change effort after you we know the value of torquw -->
-			<limit lower="${radians(-14.3)}" upper="${radians(14.3)}" velocity="5.56" effort="100" />
+			<limit lower="${radians(-14.3)}" upper="${radians(14.3)}" velocity="30" effort="1000.0" />
 		</joint>
 
 		<link name="${suffix}_wheel_steering_link">

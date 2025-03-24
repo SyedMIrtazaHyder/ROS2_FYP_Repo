@@ -6,10 +6,11 @@
 
 	<xacro:macro name="wheel" params="suffix direction parent *origin">
 		<joint name="${suffix}_${direction}_wheel_joint" type="continuous">
+			<axis xyz="0 0 1"/>
 			<xacro:insert_block name="origin"/>
 			<parent link="${parent}"/>
 			<child link="${suffix}_${direction}_wheel_link"/>
-			<axis xyz="0 0 1"/>
+			<dynamics damping="0.2" />
 		</joint>
 
 		<link name="${suffix}_${direction}_wheel_link">
@@ -31,8 +32,7 @@
 			</collision>
 			<inertial>
 				<mass value="5.0"/>
-				<origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
-				<inertia ixx="0.452" ixy="0.0" ixz="0.0" iyy="0.452" iyz="0.0" izz="0.9" />
+				<inertia ixx="${(3*radius*radius + thickness*thickness)*5/12}" ixy="0.0" ixz="0.0" iyy="${(3*radius*radius + thickness*thickness)*5/12}" iyz="0.0" izz="${5*radius*radius/2}" />
 			</inertial>
 		</link>
 	</xacro:macro>

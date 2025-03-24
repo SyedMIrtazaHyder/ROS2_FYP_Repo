@@ -12,10 +12,11 @@ def generate_launch_description():
     world = DeclareLaunchArgument(name='world', default_value='empty.sdf',
                                   description="Gazebo world where simulations are ran")
 
-    #set_env_vars = AppendEnvironmentVariable(
-    #        'IGN_GAZEBO_RESOURCE_PATH',
-    #        PathJoinSubstitution([car_model, 'meshes'])
-    #        )
+    set_env_vars = AppendEnvironmentVariable(
+            'IGN_GAZEBO_RESOURCE_PATH',
+            PathJoinSubstitution([car_model, 'meshes'])
+            )
+
     gz_server_cmd = IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
                 PathJoinSubstitution([
@@ -26,7 +27,7 @@ def generate_launch_description():
                 launch_arguments={'gz_args': ['-r ', PathJoinSubstitution([car_model, 'worlds', LaunchConfiguration('world')])]}.items()
                 )
     ld.add_action(world)
-    #ld.add_action(set_env_vars)
+    ld.add_action(set_env_vars)
     ld.add_action(gz_server_cmd)
 
     return ld
