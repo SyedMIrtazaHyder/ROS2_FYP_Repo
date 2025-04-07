@@ -15,7 +15,8 @@ def generate_launch_description():
             package="controller_manager",
             executable="spawner",
             name="ackermann_controller",
-            arguments=["ackermann_controller"]
+            #arguments=["ackermann_controller"]
+            arguments=["ackermann_steering_controller"]
             )
 
     # Launching joint state broadcaster

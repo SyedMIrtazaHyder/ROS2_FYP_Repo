@@ -1,0 +1,1903 @@
+A message was lost!!!
+	total count change:1
+	total count: 1---
+header:
+  stamp:
+    sec: 1156
+    nanosec: 600000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.078126840678558
+- 1.2552064926435
+steer_positions:
+- 0.592579401830281
+- 0.8410321375898749
+linear_velocity_command:
+- 2.07864493449624
+- 1.254688398837093
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1156
+    nanosec: 700000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.078644934476534
+- 1.2546883988457445
+steer_positions:
+- 0.5930391274565712
+- 0.8417106211702275
+linear_velocity_command:
+- 2.0791117013661906
+- 1.2542216319671429
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1156
+    nanosec: 800000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.07911170134695
+- 1.2542216319755524
+steer_positions:
+- 0.5934528805202268
+- 0.8423212563925482
+linear_velocity_command:
+- 2.079532183167531
+- 1.2538011501658026
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1156
+    nanosec: 900000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.079532183148772
+- 1.2538011501739565
+steer_positions:
+- 0.5938252582775235
+- 0.8428708280926301
+linear_velocity_command:
+- 2.079910934607715
+- 1.2534223987256181
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1157
+    nanosec: 0
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.079910934589454
+- 1.2534223987335031
+steer_positions:
+- 0.5941603982590905
+- 0.8433654426227083
+linear_velocity_command:
+- 2.0802520687815105
+- 1.2530812645518232
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1157
+    nanosec: 100000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.080252068763764
+- 1.2530812645594265
+steer_positions:
+- 0.594462024242503
+- 0.8438105956997753
+linear_velocity_command:
+- 2.080559298743301
+- 1.252774034590033
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1157
+    nanosec: 200000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.080559298726085
+- 1.2527740345973415
+steer_positions:
+- 0.5947334876275743
+- 0.8442112334691357
+linear_velocity_command:
+- 2.0808359754022407
+- 1.2524973579310932
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1157
+    nanosec: 300000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0808359753852304
+- 1.2524973579383025
+steer_positions:
+- 0.5949778046741351
+- 0.8445718074615667
+linear_velocity_command:
+- 2.081085122019911
+- 1.2522482113134223
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1157
+    nanosec: 400000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0810851220024573
+- 1.2522482113209241
+steer_positions:
+- 0.5951976900160365
+- 0.8448963240547535
+linear_velocity_command:
+- 2.081309465578076
+- 1.252023867755257
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1157
+    nanosec: 500000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.081309465560196
+- 1.2520238677630389
+steer_positions:
+- 0.5953955868237555
+- 0.8451883889886138
+linear_velocity_command:
+- 2.0815114652704656
+- 1.2518218680628679
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1157
+    nanosec: 600000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0815114652521767
+- 1.2518218680709168
+steer_positions:
+- 0.5955736939507026
+- 0.8454512474290947
+linear_velocity_command:
+- 2.0816933383578435
+- 1.25163999497549
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1157
+    nanosec: 700000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.081693338339165
+- 1.2516399949837922
+steer_positions:
+- 0.5957339903649451
+- 0.8456878200255298
+linear_velocity_command:
+- 2.081857083610611
+- 1.2514762497227225
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1157
+    nanosec: 800000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0818570835915637
+- 1.2514762497312641
+steer_positions:
+- 0.5958782571377733
+- 0.8459007353623136
+linear_velocity_command:
+- 2.082004502547986
+- 1.2513288307853476
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1157
+    nanosec: 900000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0820045025285907
+- 1.251328830794114
+steer_positions:
+- 0.5960080972333154
+- 0.8460923591654278
+linear_velocity_command:
+- 2.0821372186677736
+- 1.2511961146655604
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1158
+    nanosec: 0
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0821372186480525
+- 1.2511961146745367
+steer_positions:
+- 0.596124953319301
+- 0.8462648205882262
+linear_velocity_command:
+- 2.0822566948463344
+- 1.2510766384869996
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1158
+    nanosec: 100000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0822566948263104
+- 1.2510766384961707
+steer_positions:
+- 0.5962301237966837
+- 0.8464200358687436
+linear_velocity_command:
+- 2.082364249074262
+- 1.2509690842590717
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1158
+    nanosec: 200000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0823642490539593
+- 1.250969084268422
+steer_positions:
+- 0.5963247772263336
+- 0.8465597296212093
+linear_velocity_command:
+- 2.082461068680004
+- 1.25087226465333
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1158
+    nanosec: 300000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0824610686594465
+- 1.2508722646628434
+steer_positions:
+- 0.5964099653130185
+- 0.8466854539984295
+linear_velocity_command:
+- 2.0825482231810635
+- 1.2507851101522702
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1158
+    nanosec: 400000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.082548223160277
+- 1.2507851101619307
+steer_positions:
+- 0.5964866345910338
+- 0.8467986059379256
+linear_velocity_command:
+- 2.0826266758906886
+- 1.2507066574426449
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1158
+    nanosec: 500000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.082626675869699
+- 1.250706657452436
+steer_positions:
+- 0.5965556369412454
+- 0.8469004426834731
+linear_velocity_command:
+- 2.082697294396813
+- 1.2506360389365203
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1158
+    nanosec: 600000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0826972943756465
+- 1.2506360389464253
+steer_positions:
+- 0.5966177390564402
+- 0.8469920957544614
+linear_velocity_command:
+- 2.0827608600198437
+- 1.2505724733134898
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1158
+    nanosec: 700000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.082760859998527
+- 1.2505724733234915
+steer_positions:
+- 0.5966736309601123
+- 0.8470745835183586
+linear_velocity_command:
+- 2.082818076346355
+- 1.2505152569869786
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1158
+    nanosec: 800000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0828180763249153
+- 1.2505152569970603
+steer_positions:
+- 0.5967239336734182
+- 0.8471488225058607
+linear_velocity_command:
+- 2.0828695769270262
+- 1.2504637564063072
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1158
+    nanosec: 900000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0828695769054915
+- 1.2504637564164514
+steer_positions:
+- 0.5967692061153914
+- 0.8472156375946114
+linear_velocity_command:
+- 2.0829159322190605
+- 1.2504174011142732
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1159
+    nanosec: 0
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.082915932197458
+- 1.2504174011244624
+steer_positions:
+- 0.5968099513131738
+- 0.8472757711744936
+linear_velocity_command:
+- 2.0829576558459486
+- 1.2503756774873847
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1159
+    nanosec: 100000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.082957655824307
+- 1.2503756774976016
+steer_positions:
+- 0.5968466219911791
+- 0.8473298913963865
+linear_velocity_command:
+- 2.0829952102406226
+- 1.2503381230927109
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1159
+    nanosec: 200000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0829952102189697
+- 1.2503381231029378
+steer_positions:
+- 0.5968796256013794
+- 0.8473785995960934
+linear_velocity_command:
+- 2.0830290117319437
+- 1.2503043216013898
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1159
+    nanosec: 300000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0830290117103085
+- 1.2503043216116094
+steer_positions:
+- 0.5969093288505619
+- 0.8474224369758198
+linear_velocity_command:
+- 2.0830594351286993
+- 1.2502738982046342
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1159
+    nanosec: 400000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.08305943510711
+- 1.2502738982148287
+steer_positions:
+- 0.596936061774825
+- 0.8474618906175735
+linear_velocity_command:
+- 2.083086817850209
+- 1.2502465154831244
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1159
+    nanosec: 500000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083086817828694
+- 1.2502465154932763
+steer_positions:
+- 0.5969601214066564
+- 0.8474973988951584
+linear_velocity_command:
+- 2.083111463647923
+- 1.2502218696854106
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1159
+    nanosec: 600000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0831114636265102
+- 1.2502218696955025
+steer_positions:
+- 0.5969817750753036
+- 0.8475293563449783
+linear_velocity_command:
+- 2.083133645958153
+- 1.2501996873751804
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1159
+    nanosec: 700000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0831336459368712
+- 1.2501996873851948
+steer_positions:
+- 0.5970012633770871
+- 0.8475581180498183
+linear_velocity_command:
+- 2.0831536109222055
+- 1.250179722411128
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1159
+    nanosec: 800000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0831536109010833
+- 1.2501797224210478
+steer_positions:
+- 0.5970188028486956
+- 0.8475840035841787
+linear_velocity_command:
+- 2.0831715801066446
+- 1.2501617532266889
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1159
+    nanosec: 900000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0831715800857094
+- 1.2501617532364968
+steer_positions:
+- 0.5970345883731388
+- 0.8476073005651009
+linear_velocity_command:
+- 2.083187752953283
+- 1.2501455803800505
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1160
+    nanosec: 0
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0831877529325626
+- 1.25014558038973
+steer_positions:
+- 0.5970487953451378
+- 0.8476282678479331
+linear_velocity_command:
+- 2.0832023089856158
+- 1.250131024347718
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1160
+    nanosec: 100000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0832023089651375
+- 1.2501310243572517
+steer_positions:
+- 0.5970615816199434
+- 0.8476471384024854
+linear_velocity_command:
+- 2.0832154097957347
+- 1.2501179235375985
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1160
+    nanosec: 200000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0832154097755256
+- 1.2501179235469704
+steer_positions:
+- 0.5970730892672673
+- 0.8476641219015814
+linear_velocity_command:
+- 2.083227200833482
+- 1.250106132499852
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1160
+    nanosec: 300000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0832272008135684
+- 1.2501061325090455
+steer_positions:
+- 0.5970834461498633
+- 0.8476794070507611
+linear_velocity_command:
+- 2.0832378130174667
+- 1.250095520315867
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1160
+    nanosec: 400000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0832378129978752
+- 1.2500955203248665
+steer_positions:
+- 0.5970927673441908
+- 0.8476931636850261
+linear_velocity_command:
+- 2.083247364185568
+- 1.2500859691477653
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1160
+    nanosec: 500000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083247364166324
+- 1.250085969156555
+steer_positions:
+- 0.5971011564190922
+- 0.8477055446558636
+linear_velocity_command:
+- 2.083255960400911
+- 1.2500773729324222
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1160
+    nanosec: 600000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0832559603820395
+- 1.2500773729409866
+steer_positions:
+- 0.5971087065865057
+- 0.8477166875296206
+linear_velocity_command:
+- 2.0832636971276064
+- 1.2500696362057273
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1160
+    nanosec: 700000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083263697109132
+- 1.2500696362140518
+steer_positions:
+- 0.5971155017371701
+- 0.8477267161160041
+linear_velocity_command:
+- 2.083270660289268
+- 1.2500626730440658
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1160
+    nanosec: 800000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0832706602712143
+- 1.2500626730521358
+steer_positions:
+- 0.597121617372768
+- 0.8477357418437471
+linear_velocity_command:
+- 2.0832769272219536
+- 1.2500564061113797
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1160
+    nanosec: 900000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083276927204344
+- 1.250056406119181
+steer_positions:
+- 0.5971271214448106
+- 0.847743864998718
+linear_velocity_command:
+- 2.083282567532001
+- 1.2500507658013327
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1161
+    nanosec: 0
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083282567514858
+- 1.2500507658088518
+steer_positions:
+- 0.5971320751096445
+- 0.8477511758381852
+linear_velocity_command:
+- 2.083287643868248
+- 1.2500456894650858
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1161
+    nanosec: 100000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0832876438515933
+- 1.2500456894723093
+steer_positions:
+- 0.5971365334079972
+- 0.8477577555937034
+linear_velocity_command:
+- 2.0832922126172115
+- 1.2500411207161222
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1161
+    nanosec: 200000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0832922126005022
+- 1.250041120723379
+steer_positions:
+- 0.5971405458765102
+- 0.8477636773736698
+linear_velocity_command:
+- 2.083296324528812
+- 1.2500370088045212
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1161
+    nanosec: 300000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083296324511618
+- 1.2500370088120725
+steer_positions:
+- 0.5971441570981764
+- 0.8477690069756406
+linear_velocity_command:
+- 2.0833000252796614
+- 1.2500333080536725
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1161
+    nanosec: 400000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833000252620044
+- 1.250033308061505
+steer_positions:
+- 0.597147407197677
+- 0.8477738036174133
+linear_velocity_command:
+- 2.083303355980054
+- 1.2500299773532793
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1161
+    nanosec: 500000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833033559619563
+- 1.250029977361379
+steer_positions:
+- 0.5971503322872254
+- 0.8477781205950109
+linear_velocity_command:
+- 2.0833063536303564
+- 1.250026979702977
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1161
+    nanosec: 600000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833063536118415
+- 1.2500269797113301
+steer_positions:
+- 0.5971529648678233
+- 0.8477820058748532
+linear_velocity_command:
+- 2.083309051531792
+- 1.2500242818015415
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1161
+    nanosec: 700000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083309051512884
+- 1.2500242818101333
+steer_positions:
+- 0.5971553341903615
+- 0.8477855026267079
+linear_velocity_command:
+- 2.083311479656172
+- 1.2500218536771617
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1161
+    nanosec: 800000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083311479636895
+- 1.250021853685977
+steer_positions:
+- 0.597157466580648
+- 0.8477886497033739
+linear_velocity_command:
+- 2.0833136649787165
+- 1.250019668354617
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1161
+    nanosec: 900000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083313664959096
+- 1.2500196683636409
+steer_positions:
+- 0.5971593857318971
+- 0.8477914820723799
+linear_velocity_command:
+- 2.083315631777592
+- 1.2500177015557417
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1162
+    nanosec: 0
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083315631757654
+- 1.2500177015649583
+steer_positions:
+- 0.597161112968029
+- 0.8477940312044853
+linear_velocity_command:
+- 2.08331740190354
+- 1.2500159314297934
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1162
+    nanosec: 100000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833174018833107
+- 1.2500159314391868
+steer_positions:
+- 0.5971626674805477
+- 0.8477963254233779
+linear_velocity_command:
+- 2.0833189950225277
+- 1.250014338310806
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1162
+    nanosec: 200000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833189950020343
+- 1.2500143383203597
+steer_positions:
+- 0.5971640665418145
+- 0.847798390220378
+linear_velocity_command:
+- 2.0833204288341793
+- 1.250012904499154
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1162
+    nanosec: 300000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083320428813449
+- 1.2500129045088515
+steer_positions:
+- 0.5971653256969502
+- 0.847800248537678
+linear_velocity_command:
+- 2.0833217192683606
+- 1.2500116140649729
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1162
+    nanosec: 400000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833217192474205
+- 1.2500116140747977
+steer_positions:
+- 0.5971664589365746
+- 0.8478019210232502
+linear_velocity_command:
+- 2.08332288066212
+- 1.2500104526712132
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1162
+    nanosec: 500000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833228806409987
+- 1.2500104526811482
+steer_positions:
+- 0.5971674788522376
+- 0.8478034262602631
+linear_velocity_command:
+- 2.0833239259189296
+- 1.2500094074144044
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1162
+    nanosec: 600000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083323925897655
+- 1.2500094074244321
+steer_positions:
+- 0.5971683967763299
+- 0.8478047809735824
+linear_velocity_command:
+- 2.083324866652022
+- 1.2500084666813114
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1162
+    nanosec: 700000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833248666306226
+- 1.2500084666914149
+steer_positions:
+- 0.5971692229080152
+- 0.8478060002155675
+linear_velocity_command:
+- 2.0833257133133976
+- 1.2500076200199357
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1162
+    nanosec: 800000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833257132919023
+- 1.2500076200300974
+steer_positions:
+- 0.5971699664265286
+- 0.8478070975333486
+linear_velocity_command:
+- 2.083326475309921
+- 1.2500068580234123
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1162
+    nanosec: 900000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833264752883593
+- 1.2500068580336146
+steer_positions:
+- 0.5971706355931952
+- 0.8478080851193505
+linear_velocity_command:
+- 2.0833271611078388
+- 1.250006172225495
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1163
+    nanosec: 0
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083327161086239
+- 1.25000617223572
+steer_positions:
+- 0.5971712378431895
+- 0.847808973946751
+linear_velocity_command:
+- 2.0833277783268067
+- 1.2500055550065268
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1163
+    nanosec: 100000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083327778305198
+- 1.2500055550167573
+steer_positions:
+- 0.5971717798681921
+- 0.8478097738914171
+linear_velocity_command:
+- 2.083328333824569
+- 1.2500049995087643
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1163
+    nanosec: 200000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083328333802981
+- 1.2500049995189824
+steer_positions:
+- 0.5971722676906857
+- 0.8478104938416166
+linear_velocity_command:
+- 2.083328833773105
+- 1.2500044995602282
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1163
+    nanosec: 300000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833288337515667
+- 1.2500044995704163
+steer_positions:
+- 0.5971727067309343
+- 0.847811141796795
+linear_velocity_command:
+- 2.0833292837272395
+- 1.2500040496060942
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1163
+    nanosec: 400000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833292837057797
+- 1.2500040496162348
+steer_positions:
+- 0.597173101867158
+- 0.84781172495646
+linear_velocity_command:
+- 2.0833296886863253
+- 1.250003644647008
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1163
+    nanosec: 500000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083329688664973
+- 1.2500036446570835
+steer_positions:
+- 0.597173457489756
+- 0.8478122498001507
+linear_velocity_command:
+- 2.0833300531497936
+- 1.2500032801835397
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1163
+    nanosec: 600000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833300531285777
+- 1.2500032801935326
+steer_positions:
+- 0.5971737775501009
+- 0.8478127221594801
+linear_velocity_command:
+- 2.08333038116716
+- 1.2500029521661735
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1163
+    nanosec: 700000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083330381146109
+- 1.2500029521760665
+steer_positions:
+- 0.5971740656044036
+- 0.8478131472828722
+linear_velocity_command:
+- 2.0833306763829778
+- 1.2500026569503562
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1163
+    nanosec: 800000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833306763621193
+- 1.2500026569601324
+steer_positions:
+- 0.5971743248532815
+- 0.8478135298939261
+linear_velocity_command:
+- 2.0833309420773736
+- 1.25000239125596
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1163
+    nanosec: 900000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083330942056736
+- 1.2500023912656022
+steer_positions:
+- 0.5971745581772749
+- 0.8478138742438747
+linear_velocity_command:
+- 2.0833311812024586
+- 1.250002152130875
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1164
+    nanosec: 0
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833311811820696
+- 1.2500021521403668
+steer_positions:
+- 0.5971747681688657
+- 0.8478141841588239
+linear_velocity_command:
+- 2.0833313964151348
+- 1.2500019369181987
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1164
+    nanosec: 100000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083331396395021
+- 1.2500019369275235
+steer_positions:
+- 0.5971749571612985
+- 0.847814463082286
+linear_velocity_command:
+- 2.0833315901066296
+- 1.2500017432267037
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1164
+    nanosec: 200000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083331590086818
+- 1.2500017432358452
+steer_positions:
+- 0.5971751272544825
+- 0.847814714113393
+linear_velocity_command:
+- 2.083331764429037
+- 1.2500015689042967
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1164
+    nanosec: 300000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833317644095537
+- 1.250001568913239
+steer_positions:
+- 0.5971752803383503
+- 0.8478149400413916
+linear_velocity_command:
+- 2.0833319213192594
+- 1.2500014120140739
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1164
+    nanosec: 400000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833319213001302
+- 1.2500014120228018
+steer_positions:
+- 0.5971754181138302
+- 0.8478151433765958
+linear_velocity_command:
+- 2.083332062520505
+- 1.2500012708128279
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1164
+    nanosec: 500000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833320625017553
+- 1.250001270821326
+steer_positions:
+- 0.5971755421117644
+- 0.8478153263782763
+linear_velocity_command:
+- 2.0833321896016628
+- 1.2500011437316705
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1164
+    nanosec: 600000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083332189583316
+- 1.2500011437399239
+steer_positions:
+- 0.5971756537099062
+- 0.8478154910797843
+linear_velocity_command:
+- 2.083332303974733
+- 1.2500010293586004
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1164
+    nanosec: 700000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083332303956814
+- 1.2500010293665946
+steer_positions:
+- 0.5971757541482305
+- 0.8478156393111448
+linear_velocity_command:
+- 2.0833324069105186
+- 1.250000926422815
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1164
+    nanosec: 800000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.08333240689305
+- 1.2500009264305363
+steer_positions:
+- 0.5971758445427224
+- 0.8478157727193737
+linear_velocity_command:
+- 2.0833324995527462
+- 1.2500008337805872
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1164
+    nanosec: 900000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.08333249953575
+- 1.250000833788022
+steer_positions:
+- 0.5971759258977674
+- 0.8478158927867742
+linear_velocity_command:
+- 2.083332582930766
+- 1.2500007504025674
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1165
+    nanosec: 0
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083332582914264
+- 1.2500007504097026
+steer_positions:
+- 0.5971759991173089
+- 0.8478160008474346
+linear_velocity_command:
+- 2.0833326579709968
+- 1.2500006753623367
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1165
+    nanosec: 100000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833326579541414
+- 1.2500006753696862
+steer_positions:
+- 0.5971760650148963
+- 0.8478160981020278
+linear_velocity_command:
+- 2.0833327255072143
+- 1.250000607826119
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1165
+    nanosec: 200000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833327254898797
+- 1.2500006078337589
+steer_positions:
+- 0.5971761243227216
+- 0.8478161856311673
+linear_velocity_command:
+- 2.0833327862898186
+- 1.250000547043515
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1165
+    nanosec: 300000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083332786272027
+- 1.250000547051432
+steer_positions:
+- 0.5971761776997688
+- 0.8478162644073862
+linear_velocity_command:
+- 2.083332840994169
+- 1.2500004923391648
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1165
+    nanosec: 400000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083332840975943
+- 1.2500004923473451
+steer_positions:
+- 0.597176225739108
+- 0.8478163353059843
+linear_velocity_command:
+- 2.083332890228088
+- 1.2500004431052452
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1165
+    nanosec: 500000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.0833328902094514
+- 1.2500004431136744
+steer_positions:
+- 0.5971762689745121
+- 0.8478163991147315
+linear_velocity_command:
+- 2.083332934538622
+- 1.2500003987947113
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1165
+    nanosec: 600000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 2.083332934519599
+- 1.2500003988033748
+steer_positions:
+- 0.5971763078863748
+- 0.847816456542594
+linear_velocity_command:
+- 0.0
+- 0.0
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1165
+    nanosec: 700000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 3.9659194891751006e-10
+- 8.761590221785867e-16
+steer_positions:
+- 0.5971763429067617
+- 0.8478165082279366
+linear_velocity_command:
+- 0.0
+- 0.0
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1165
+    nanosec: 800000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 3.9510479755865737e-10
+- 1.1685370078788788e-15
+steer_positions:
+- 0.5971763744251702
+- 0.8478165547446446
+linear_velocity_command:
+- 0.0
+- 0.0
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1165
+    nanosec: 900000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 3.945734261962054e-10
+- 1.2689265057545113e-15
+steer_positions:
+- 0.5971764027917278
+- 0.8478165966096893
+linear_velocity_command:
+- 0.0
+- 0.0
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1166
+    nanosec: 0
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 1.1059432636042121e-14
+- -5.461720324663748e-15
+steer_positions:
+- 0.5971764283217978
+- 0.8478166342880862
+linear_velocity_command:
+- 0.0
+- 0.0
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1166
+    nanosec: 100000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 9.116901273159496e-15
+- -5.087112380444008e-15
+steer_positions:
+- 0.5971764512988958
+- 0.8478166681986161
+linear_velocity_command:
+- 0.0
+- 0.0
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1166
+    nanosec: 200000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 8.03906900019558e-15
+- -4.7109446250519e-15
+steer_positions:
+- 0.5971764719782763
+- 0.847816698718092
+linear_velocity_command:
+- 0.0
+- 0.0
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1166
+    nanosec: 300000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 7.177286879988978e-15
+- -4.311752820087525e-15
+steer_positions:
+- 0.597176490589722
+- 0.8478167261856202
+linear_velocity_command:
+- 0.0
+- 0.0
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1166
+    nanosec: 400000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 6.447415953515366e-15
+- -3.904350936523651e-15
+steer_positions:
+- 0.5971765073400231
+- 0.8478167509064012
+linear_velocity_command:
+- 0.0
+- 0.0
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
+header:
+  stamp:
+    sec: 1166
+    nanosec: 500000000
+  frame_id: odom
+traction_wheels_position: []
+traction_wheels_velocity:
+- 5.802338530776067e-15
+- -3.519894116709712e-15
+steer_positions:
+- 0.5971765224152975
+- 0.8478167731551041
+linear_velocity_command:
+- 0.0
+- 0.0
+steering_angle_command:
+- 0.5971766580926776
+- 0.8478169733934057
+---
