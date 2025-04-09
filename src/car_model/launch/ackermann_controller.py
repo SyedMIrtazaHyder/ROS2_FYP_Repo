@@ -10,15 +10,6 @@ def generate_launch_description():
     launch_jsb = DeclareLaunchArgument(name='launch_jsb', default_value='false',
             description="Launching jsb controller")
 
-    # Launching ros2_controls node
-    ackermann_controller = Node(
-            package="controller_manager",
-            executable="spawner",
-            name="ackermann_controller",
-            #arguments=["ackermann_controller"]
-            arguments=["ackermann_steering_controller"]
-            )
-
     # Launching joint state broadcaster
     jsb = Node(
             package="controller_manager",
@@ -28,7 +19,6 @@ def generate_launch_description():
             condition=IfCondition(LaunchConfiguration('launch_jsb'))
             )
 
-    ld.add_action(ackermann_controller)
     ld.add_action(launch_jsb)
     ld.add_action(jsb)
     return ld
