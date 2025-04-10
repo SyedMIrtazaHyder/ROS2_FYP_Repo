@@ -37,7 +37,6 @@ def generate_launch_description():
                  'use_sim_time': LaunchConfiguration('use_sim_time')}]
             )
 
-
     ld.add_action(rviz_config)
     ld.add_action(urdf)
     ld.add_action(use_sim_time)

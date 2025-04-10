@@ -12,7 +12,7 @@ def generate_launch_description():
 
 
     # Launching the rviz file with the model
-    urdf_model = LaunchConfiguration('urdf_model', default='AV_car.urdf.xacro')
+    urdf_model = LaunchConfiguration('urdf_model', default='gz_ackermann_demo.xacro.urdf')
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     rviz_config = LaunchConfiguration('rviz_config', default='updated_config.rviz')
     launch_jsb = LaunchConfiguration('launch_jsb', default='true')
@@ -40,6 +40,8 @@ def generate_launch_description():
             executable='create',
             arguments=['-topic', '/robot_description'],
             output='screen')
+
+    # Launching ros_gz_bridge
 
     ld.add_action(rviz_urdf_launch)
     ld.add_action(ign_gz_launch)

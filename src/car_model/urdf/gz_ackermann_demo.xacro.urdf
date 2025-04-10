@@ -1,0 +1,232 @@
+<?xml version="1.0" ?>
+<robot name="vehicle_blue" xmlns:xacro="http://ros.org/wiki/xacro">
+	<link name="base_link" />
+
+	<joint name="chassis_joint" type="fixed">
+		<parent link="base_link" />
+		<child link="chassis_link" />
+		<origin xyz="0 0 0.325" />
+	</joint>
+
+	<!-- Chassis -->
+	<link name="chassis_link">
+		<visual>
+			<origin xyz="0 0 0.175"/>
+			<geometry>
+				<box size="2.01142 1 0.568726"/>
+			</geometry>
+			<material name="grey">
+				<color rgba="0.5 0.5 1.0 0.5" />
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0.175"/>
+			<geometry>
+				<box size="2.01142 1 0.568726"/>
+			</geometry>
+			<material name="grey">
+				<color rgba="0.5 0.5 1.0 0.5" />
+			</material>
+		</collision>
+		<inertial>
+			<mass value="1.14395"/>
+			<inertia ixx="0.126164" ixy="0" ixz="0" iyy="0.416519" iyz="0" izz="0.481014"/>
+		</inertial>
+	</link>
+
+	<!-- Front Left Steering -->
+	<joint name="front_left_wheel_steering_joint" type="revolute">
+		<axis xyz="0 0 1" />
+		<parent link="chassis_link" />
+		<child link="front_left_wheel_steering_link" />
+		<limit lower="-0.6" upper="0.6" velocity="1.0" effort="25" />
+	</joint>
+
+	<link name="front_left_wheel_steering_link">
+		<visual>
+			<origin xyz="0.554283 0.5 0.02" rpy="0 0 0"/>
+			<geometry>
+				<cylinder length="0.1" radius="0.03"/>
+			</geometry>
+			<material name="white">
+				<color rgba="1 1 1 0.5" />
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0.554283 0.5 0.02" rpy="0 0 0"/>
+			<geometry>
+				<cylinder length="0.1" radius="0.03"/>
+			</geometry>
+			<material name="white">
+				<color rgba="1 1 1 0.5" />
+			</material>
+		</collision>
+		<inertial>
+			<mass value="0.5"/>
+			<inertia ixx="0.0153" ixy="0" ixz="0" iyy="0.025" iyz="0" izz="0.0153"/>
+		</inertial>
+	</link>
+
+	<!-- Front Left Wheel -->
+	<joint name="front_left_wheel_joint" type="continuous">
+		<axis xyz="0 0 1" />
+		<parent link="front_left_wheel_steering_link" />
+		<child link="front_left_wheel_link" />
+	</joint>
+
+	<link name="front_left_wheel_link">
+		<visual>
+			<origin xyz="0.554283 0.625029 -0.025" rpy="-1.5707 0 0"/>
+			<geometry>
+				<cylinder length="0.15" radius="0.3"/>
+			</geometry>
+			<material name="black">
+				<color rgba="0.2 0.2 0.2 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0.554283 0.625029 -0.025" rpy="-1.5707 0 0"/>
+			<geometry>
+				<cylinder length="0.15" radius="0.3"/>
+			</geometry>
+			<material name="black">
+				<color rgba="0.2 0.2 0.2 1" />
+			</material>
+		</collision>
+		<inertial>
+			<mass value="2"/>
+			<inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+		</inertial>
+	</link>
+
+	<!-- Front Right Steering -->
+	<joint name="front_right_wheel_steering_joint" type="revolute">
+		<axis xyz="0 0 1" />
+		<parent link="chassis_link" />
+		<child link="front_right_wheel_steering_link" />
+		<limit lower="-0.6" upper="0.6" velocity="1.0" effort="25" />
+	</joint>
+
+	<link name="front_right_wheel_steering_link">
+		<visual>
+			<origin xyz="0.554283 -0.5 0.02" rpy="0 0 0"/>
+			<geometry>
+				<cylinder length="0.1" radius="0.03"/>
+			</geometry>
+			<material name="white">
+				<color rgba="1 1 1 0.5" />
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0.554283 0.5 0.02" rpy="0 0 0"/>
+			<geometry>
+				<cylinder length="0.1" radius="0.03"/>
+			</geometry>
+			<material name="white">
+				<color rgba="1 1 1 0.5" />
+			</material>
+		</collision>
+		<inertial>
+			<mass value="0.5"/>
+			<inertia ixx="0.0153" ixy="0" ixz="0" iyy="0.025" iyz="0" izz="0.0153"/>
+		</inertial>
+	</link>
+
+	<!-- Front Right Wheel -->
+	<joint name="front_right_wheel_joint" type="continuous">
+		<axis xyz="0 0 1" />
+		<parent link="front_right_wheel_steering_link" />
+		<child link="front_right_wheel_link" />
+	</joint>
+
+	<link name="front_right_wheel_link">
+		<visual>
+			<origin xyz="0.554283 -0.625029 -0.025" rpy="-1.5707 0 0"/>
+			<geometry>
+				<cylinder length="0.15" radius="0.3"/>
+			</geometry>
+			<material name="black">
+				<color rgba="0.2 0.2 0.2 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0.554283 -0.625029 -0.025" rpy="-1.5707 0 0"/>
+			<geometry>
+				<cylinder length="0.15" radius="0.3"/>
+			</geometry>
+			<material name="black">
+				<color rgba="0.2 0.2 0.2 1" />
+			</material>
+		</collision>
+		<inertial>
+			<mass value="2"/>
+			<inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+		</inertial>
+	</link>
+
+	<!-- Rear Left Wheel -->
+	<joint name="rear_left_wheel_joint" type="continuous">
+		<axis xyz="0 0 1" />
+		<parent link="chassis_link" />
+		<child link="rear_left_wheel_link" />
+	</joint>
+
+	<link name="rear_left_wheel_link">
+		<visual>
+			<origin xyz="-0.957138 0.625029 -0.025" rpy="-1.5707 0 0"/>
+			<geometry>
+				<cylinder length="0.15" radius="0.3"/>
+			</geometry>
+			<material name="black">
+				<color rgba="0.2 0.2 0.2 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="-0.957138 0.625029 -0.025" rpy="-1.5707 0 0"/>
+			<geometry>
+				<cylinder length="0.15" radius="0.3"/>
+			</geometry>
+			<material name="black">
+				<color rgba="0.2 0.2 0.2 1" />
+			</material>
+		</collision>
+		<inertial>
+			<mass value="2"/>
+			<inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+		</inertial>
+	</link>
+
+	<!-- Rear Right Wheel -->
+	<joint name="rear_right_wheel_joint" type="continuous">
+		<axis xyz="0 0 1" />
+		<parent link="chassis_link" />
+		<child link="rear_right_wheel_link" />
+	</joint>
+
+	<link name="rear_right_wheel_link">
+		<visual>
+			<origin xyz="-0.957138 -0.625029 -0.025" rpy="-1.5707 0 0"/>
+			<geometry>
+				<cylinder length="0.15" radius="0.3"/>
+			</geometry>
+			<material name="black">
+				<color rgba="0.2 0.2 0.2 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="-0.957138 -0.625029 -0.025" rpy="-1.5707 0 0"/>
+			<geometry>
+				<cylinder length="0.15" radius="0.3"/>
+			</geometry>
+			<material name="black">
+				<color rgba="0.2 0.2 0.2 1" />
+			</material>
+		</collision>
+		<inertial>
+			<mass value="2"/>
+			<inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+		</inertial>
+	</link>
+
+	<xacro:include filename="gz_ackermann_controller.xacro"/>
+</robot>
