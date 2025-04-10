@@ -12,7 +12,7 @@ def generate_launch_description():
 
 
     # Launching the rviz file with the model
-    urdf_model = LaunchConfiguration('urdf_model', default='gz_ackermann_demo.xacro.urdf')
+    urdf = LaunchConfiguration('urdf', default='gz_ackermann_demo.xacro.urdf')
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     rviz_config = LaunchConfiguration('rviz_config', default='updated_config.rviz')
     launch_jsb = LaunchConfiguration('launch_jsb', default='true')
@@ -21,7 +21,7 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(
                 PathJoinSubstitution([car_model, 'launch', 'rviz_launch.py'])
                 ),
-            launch_arguments={'rviz_config': rviz_config,'use_sim_time': use_sim_time, 'urdf_model': urdf_model}.items()
+            launch_arguments={'rviz_config': rviz_config,'use_sim_time': use_sim_time, 'urdf': urdf}.items()
             )
 
     # Launching an empty gazebo gui and server
