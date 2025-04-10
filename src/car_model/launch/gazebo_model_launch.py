@@ -41,9 +41,17 @@ def generate_launch_description():
             arguments=['-topic', '/robot_description'],
             output='screen')
 
-    # Launching ros_gz_bridge
+    # Launching ros_ign_bridge
+    gz_bridge = Node(
+            package="ros_gz_bridge",
+            executable="parameter_bridge",
+            name="bridge_node",
+            arguments=['/joint_states@sensor_msgs/msg/JointState[ignition.msgs.Model'],
+            output='screen'
+            )
 
     ld.add_action(rviz_urdf_launch)
     ld.add_action(ign_gz_launch)
     ld.add_action(spawn_robot)
+    ld.add_action(gz_bridge)
     return ld
