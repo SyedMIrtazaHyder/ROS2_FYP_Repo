@@ -1,5 +1,16 @@
 <?xml version="1.0" ?>
 <robot name="vehicle_blue" xmlns:xacro="http://ros.org/wiki/xacro">
+	<!-- Variables and Constants -->
+	<xacro:property name="chassis_length" value="2.01142" />
+	<xacro:property name="chassis_width" value="1" />
+	<xacro:property name="chassis_height" value="0.568726" />
+	<xacro:property name="chassis_mass" value="100" />
+	<xacro:macro name="cuboid_inertia" params="length width height mass">
+		<inertia ixx="${mass*(width*width + height*height)/12}" ixy="0" ixz="0" iyy="${mass*(length*length + height*height)/12}"  iyz="0" izz="${mass*(width*width + length*length)/12}"  />
+	</xacro:macro>
+
+	<xacro:property name="wheel_base" value="1.5" />
+	<!-- Model -->
 	<link name="base_link" />
 
 	<joint name="chassis_joint" type="fixed">
@@ -13,7 +24,7 @@
 		<visual>
 			<origin xyz="0 0 0.175"/>
 			<geometry>
-				<box size="2.01142 1 0.568726"/>
+				<box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
 			</geometry>
 			<material name="grey">
 				<color rgba="0.5 0.5 1.0 0.5" />
@@ -22,16 +33,17 @@
 		<collision>
 			<origin xyz="0 0 0.175"/>
 			<geometry>
-				<box size="2.01142 1 0.568726"/>
+				<box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
 			</geometry>
 			<material name="grey">
 				<color rgba="0.5 0.5 1.0 0.5" />
 			</material>
 		</collision>
 		<inertial>
-			<mass value="1.14395"/>
-			<inertia ixx="0.126164" ixy="0" ixz="0" iyy="0.416519" iyz="0" izz="0.481014"/>
-		</inertial>
+			<mass value="${chassis_mass}"/>
+			<!-- <inertia ixx="0.126164" ixy="0" ixz="0" iyy="0.416519" iyz="0" izz="0.481014"/> -->
+			<xacro:cuboid_inertia length="${chassis_length}" width="${chassis_width}" height="${chassis_height}" mass="${chassis_mass}" />
+			</inertial> 
 	</link>
 
 	<!-- Front Left Steering -->
@@ -77,7 +89,7 @@
 	<link name="front_left_wheel_link">
 		<visual>
 			<geometry>
-				<cylinder length="0.15" radius="0.3"/>
+				<cylinder length="0.07" radius="0.3"/>
 			</geometry>
 			<material name="black">
 				<color rgba="0.2 0.2 0.2 1" />
@@ -85,15 +97,15 @@
 		</visual>
 		<collision>
 			<geometry>
-				<cylinder length="0.15" radius="0.3"/>
+				<cylinder length="0.07" radius="0.3"/>
 			</geometry>
 			<material name="black">
 				<color rgba="0.2 0.2 0.2 1" />
 			</material>
 		</collision>
 		<inertial>
-			<mass value="2"/>
-			<inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+			<mass value="5"/>
+			<inertia ixx="0.11454" ixy="0" ixz="0" iyy="0.11454" iyz="0" izz="0.225"/>
 		</inertial>
 	</link>
 
@@ -140,7 +152,7 @@
 	<link name="front_right_wheel_link">
 		<visual>
 			<geometry>
-				<cylinder length="0.15" radius="0.3"/>
+				<cylinder length="0.07" radius="0.3"/>
 			</geometry>
 			<material name="black">
 				<color rgba="0.2 0.2 0.2 1" />
@@ -148,15 +160,15 @@
 		</visual>
 		<collision>
 			<geometry>
-				<cylinder length="0.15" radius="0.3"/>
+				<cylinder length="0.07" radius="0.3"/>
 			</geometry>
 			<material name="black">
 				<color rgba="0.2 0.2 0.2 1" />
 			</material>
 		</collision>
 		<inertial>
-			<mass value="2"/>
-			<inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+			<mass value="5"/>
+			<inertia ixx="0.11454" ixy="0" ixz="0" iyy="0.11454" iyz="0" izz="0.225"/>
 		</inertial>
 	</link>
 
@@ -171,7 +183,7 @@
 	<link name="rear_left_wheel_link">
 		<visual>
 			<geometry>
-				<cylinder length="0.15" radius="0.3"/>
+				<cylinder length="0.07" radius="0.3"/>
 			</geometry>
 			<material name="black">
 				<color rgba="0.2 0.2 0.2 1" />
@@ -179,15 +191,15 @@
 		</visual>
 		<collision>
 			<geometry>
-				<cylinder length="0.15" radius="0.3"/>
+				<cylinder length="0.07" radius="0.3"/>
 			</geometry>
 			<material name="black">
 				<color rgba="0.2 0.2 0.2 1" />
 			</material>
 		</collision>
 		<inertial>
-			<mass value="2"/>
-			<inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+			<mass value="5"/>
+			<inertia ixx="0.11454" ixy="0" ixz="0" iyy="0.11454" iyz="0" izz="0.225"/>
 		</inertial>
 	</link>
 
@@ -202,7 +214,7 @@
 	<link name="rear_right_wheel_link">
 		<visual>
 			<geometry>
-				<cylinder length="0.15" radius="0.3"/>
+				<cylinder length="0.07" radius="0.3"/>
 			</geometry>
 			<material name="black">
 				<color rgba="0.2 0.2 0.2 1" />
@@ -210,15 +222,15 @@
 		</visual>
 		<collision>
 			<geometry>
-				<cylinder length="0.15" radius="0.3"/>
+				<cylinder length="0.07" radius="0.3"/>
 			</geometry>
 			<material name="black">
 				<color rgba="0.2 0.2 0.2 1" />
 			</material>
 		</collision>
 		<inertial>
-			<mass value="2"/>
-			<inertia ixx="0.145833" ixy="0" ixz="0" iyy="0.145833" iyz="0" izz="0.125"/>
+			<mass value="5"/>
+			<inertia ixx="0.11454" ixy="0" ixz="0" iyy="0.11454" iyz="0" izz="0.225"/>
 		</inertial>
 	</link>
 
