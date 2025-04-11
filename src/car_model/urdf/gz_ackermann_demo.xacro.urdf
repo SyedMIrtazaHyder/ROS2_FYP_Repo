@@ -25,12 +25,13 @@
 	<!-- Chassis -->
 	<link name="chassis_link">
 		<visual>
-			<origin xyz="0 0 0.555"/>
+			<!-- These numbers are taken from Rviz and are just to align the mesh with the wheels-->
+			<origin xyz="0 -0.35 0.435" rpy="${pi/2} 0 ${pi/2}"/>
 			<geometry>
-				<box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
+				<mesh filename="package://car_model/meshes/chassis.stl" scale="0.002 0.001 0.001"/>
 			</geometry>
 			<material name="grey">
-				<color rgba="0.5 0.5 1.0 0.5" />
+				<color rgba="0.5 0.5 0.5 0.8" />
 			</material>
 		</visual>
 		<collision>

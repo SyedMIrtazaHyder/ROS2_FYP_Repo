@@ -18,6 +18,7 @@
 			<wheel_radius>0.3</wheel_radius>
 			<min_velocity>-5</min_velocity>
 			<max_velocity>5</max_velocity>
+			<!-- Alter these acceleration values to create a more realistic speed change -->
 			<min_acceleration>-3</min_acceleration>
 			<max_acceleration>3</max_acceleration>
 		</plugin>
