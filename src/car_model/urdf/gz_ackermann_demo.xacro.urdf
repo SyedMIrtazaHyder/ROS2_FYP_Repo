@@ -1,15 +1,18 @@
 <?xml version="1.0" ?>
 <robot name="vehicle_blue" xmlns:xacro="http://ros.org/wiki/xacro">
 	<!-- Variables and Constants -->
-	<xacro:property name="chassis_length" value="2.01142" />
+	<xacro:property name="chassis_length" value="2.60" />
 	<xacro:property name="chassis_width" value="1" />
-	<xacro:property name="chassis_height" value="0.568726" />
+	<xacro:property name="chassis_height" value="1.5" />
 	<xacro:property name="chassis_mass" value="100" />
 	<xacro:macro name="cuboid_inertia" params="length width height mass">
-		<inertia ixx="${mass*(width*width + height*height)/12}" ixy="0" ixz="0" iyy="${mass*(length*length + height*height)/12}"  iyz="0" izz="${mass*(width*width + length*length)/12}"  />
+		<inertia ixx="${mass*(width*width + height*height)/12}" ixy="0" ixz="0" iyy="${mass*(length*length + height*height)/12}"  iyz="0" izz="${mass*(width*width + length*length)/12}" />
 	</xacro:macro>
 
-	<xacro:property name="wheel_base" value="1.5" />
+	<xacro:property name="wheel_base" value="1.7" />
+	<xacro:property name="rear_wheel_x" value="-0.8" />
+	<xacro:property name="front_wheel_x" value="0.9" />
+	<!-- For ground clearance just going to update the collision and visual box of chassis_link -->
 	<!-- Model -->
 	<link name="base_link" />
 
@@ -22,7 +25,7 @@
 	<!-- Chassis -->
 	<link name="chassis_link">
 		<visual>
-			<origin xyz="0 0 0.175"/>
+			<origin xyz="0 0 0.555"/>
 			<geometry>
 				<box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
 			</geometry>
@@ -31,7 +34,7 @@
 			</material>
 		</visual>
 		<collision>
-			<origin xyz="0 0 0.175"/>
+			<origin xyz="0 0 0.555"/>
 			<geometry>
 				<box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
 			</geometry>
@@ -49,10 +52,10 @@
 	<!-- Front Left Steering -->
 	<joint name="front_left_wheel_steering_joint" type="revolute">
 		<axis xyz="0 0 1" />
-		<origin xyz="0.554283 0.5 0.02" rpy="0 0 0"/>
+		<origin xyz="${front_wheel_x} 0.5 0.02" rpy="0 0 0"/>
 		<parent link="chassis_link" />
 		<child link="front_left_wheel_steering_link" />
-		<limit lower="-0.6" upper="0.6" velocity="1.0" effort="25" />
+		<limit lower="-0.25" upper="0.25" velocity="1.0" effort="25" />
 	</joint>
 
 	<link name="front_left_wheel_steering_link">
@@ -111,11 +114,11 @@
 
 	<!-- Front Right Steering -->
 	<joint name="front_right_wheel_steering_joint" type="revolute">
-		<origin xyz="0.554283 -0.5 0.02" rpy="0 0 0"/>
+		<origin xyz="${front_wheel_x} -0.5 0.02" rpy="0 0 0"/>
 		<axis xyz="0 0 1" />
 		<parent link="chassis_link" />
 		<child link="front_right_wheel_steering_link" />
-		<limit lower="-0.6" upper="0.6" velocity="1.0" effort="25" />
+		<limit lower="-0.25" upper="0.25" velocity="1.0" effort="25" />
 	</joint>
 
 	<link name="front_right_wheel_steering_link">
@@ -174,7 +177,7 @@
 
 	<!-- Rear Left Wheel -->
 	<joint name="rear_left_wheel_joint" type="continuous">
-		<origin xyz="-0.957138 0.625029 -0.025" rpy="-1.5707 0 0"/>
+		<origin xyz="${rear_wheel_x} 0.625029 -0.025" rpy="-1.5707 0 0"/>
 		<axis xyz="0 0 1" />
 		<parent link="chassis_link" />
 		<child link="rear_left_wheel_link" />
@@ -206,7 +209,7 @@
 	<!-- Rear Right Wheel -->
 	<joint name="rear_right_wheel_joint" type="continuous">
 		<axis xyz="0 0 1" />
-		<origin xyz="-0.957138 -0.625029 -0.025" rpy="-1.5707 0 0"/>
+		<origin xyz="${rear_wheel_x} -0.625029 -0.025" rpy="-1.5707 0 0"/>
 		<parent link="chassis_link" />
 		<child link="rear_right_wheel_link" />
 	</joint>
