@@ -12,7 +12,7 @@ def generate_launch_description():
 
 
     # Launching the rviz file with the model
-    urdf = LaunchConfiguration('urdf', default='gz_ackermann_demo.xacro.urdf')
+    urdf = LaunchConfiguration('urdf', default='AV_car.xacro.urdf')
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     rviz_config = LaunchConfiguration('rviz_config', default='updated_config.rviz')
     launch_jsb = LaunchConfiguration('launch_jsb', default='true')

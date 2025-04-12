@@ -238,5 +238,37 @@
 		</inertial>
 	</link>
 
-	<xacro:include filename="gz_ackermann_controller.xacro"/>
+	<!-- LiDAR -->
+	<joint name="lidar_joint" type="continuous">
+		<origin xyz="-0.05 0 1.305" />
+		<axis xyz="0 0 1" />
+		<parent link="chassis_link" />
+		<child link="lidar_link" />
+	</joint>
+
+	<link name="lidar_link">
+		<visual>
+			<origin xyz="0 0 0.03675" />
+			<geometry>
+				<cylinder length="0.0735" radius="0.04" />
+			</geometry>
+			<material name="orange">
+				<color rgba="0.5 0.4 0.3 1" />
+			</material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0.03675" />
+			<geometry>
+				<cylinder length="0.0735" radius="0.04" />
+			</geometry>
+			<material name="orange">
+				<color rgba="0.5 0.4 0.3 1" />
+			</material>
+		</collision>
+		<inertial>
+			<mass value="0.425" />
+			<inertia ixx="0.000361" ixy="0" ixz="0" iyy="0.000361" iyz="0" izz="0.00034"/>
+		</inertial>
+	</link>
+	<xacro:include filename="gz_plugins.xacro"/>
 </robot>
