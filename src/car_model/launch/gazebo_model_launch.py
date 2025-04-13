@@ -14,7 +14,7 @@ def generate_launch_description():
     # Launching the rviz file with the model
     urdf = LaunchConfiguration('urdf', default='AV_car.xacro.urdf')
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
-    rviz_config = LaunchConfiguration('rviz_config', default='updated_config.rviz')
+    rviz_config = LaunchConfiguration('rviz_config', default='lidar_config.rviz')
     launch_jsb = LaunchConfiguration('launch_jsb', default='true')
 
     rviz_urdf_launch = IncludeLaunchDescription(
@@ -25,7 +25,7 @@ def generate_launch_description():
             )
 
     # Launching an empty gazebo gui and server
-    world = LaunchConfiguration('world', default='empty.sdf')
+    world = LaunchConfiguration('world', default='test_world.sdf')
 
     ign_gz_launch = IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
