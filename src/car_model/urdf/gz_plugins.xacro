@@ -36,6 +36,7 @@
 			<joint_name>rear_left_wheel_joint</joint_name>
 			<joint_name>rear_right_wheel_joint</joint_name>
 			<joint_name>lidar_joint</joint_name>
+			<joint_name>imu_joint</joint_name>
 		</plugin>
 	</gazebo>
 
@@ -88,6 +89,22 @@
 		  <frame_id>lidar_link</frame_id>
 		  <gz_frame_id>lidar_link</gz_frame_id>
 		  <ign_frame_id>lidar_link</ign_frame_id>
+		</sensor>
+	</gazebo>
+
+	<!-- IMU -->
+	<gazebo>
+		<plugin filename="libignition-gazebo-imu-system.so"
+        name="ignition::gazebo::systems::Imu">
+		</plugin>
+	</gazebo>
+
+	<gazebo reference="imu_link">
+		<sensor name="imu_link" type="imu">
+			<always_on>1</always_on>
+			<update_rate>1</update_rate>
+			<visualize>true</visualize>
+			<topic>imu</topic>
 		</sensor>
 	</gazebo>
 </robot>

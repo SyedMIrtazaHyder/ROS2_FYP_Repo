@@ -16,13 +16,13 @@
 	<!-- Model -->
 	<link name="base_link" />
 
+	<!-- Chassis -->
 	<joint name="chassis_joint" type="fixed">
 		<parent link="base_link" />
 		<child link="chassis_link" />
 		<origin xyz="0 0 0.325" />
 	</joint>
 
-	<!-- Chassis -->
 	<link name="chassis_link">
 		<visual>
 			<!-- These numbers are taken from Rviz and are just to align the mesh with the wheels-->
@@ -235,6 +235,21 @@
 		<inertial>
 			<mass value="5"/>
 			<inertia ixx="0.11454" ixy="0" ixz="0" iyy="0.11454" iyz="0" izz="0.225"/>
+		</inertial>
+	</link>
+
+	<!-- IMU -->
+	<joint name="imu_joint" type="continuous">
+		<parent link="chassis_link" />
+		<axis xyz="0 0 1" />
+		<child link="imu_link" />
+		<origin xyz="-0.05 0 1.305" />
+	</joint>
+
+	<link name="imu_link">
+		<inertial>
+			<mass value="0.425" />
+			<inertia ixx="0.000361" ixy="0" ixz="0" iyy="0.000361" iyz="0" izz="0.00034"/>
 		</inertial>
 	</link>
 
