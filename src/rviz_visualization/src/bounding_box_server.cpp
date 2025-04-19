@@ -27,26 +27,31 @@ public:
 	
 	void box_generator(const std::shared_ptr<interfaces::srv::Box::Request> request,
 						std::shared_ptr<interfaces::srv::Box::Response> response){
-		auto marker = visualization_msgs::msg::Marker();
+		auto top_bb = visualization_msgs::msg::Marker();
+		auto vertical_edges = visualization_msgs::msg::Marker();
 
-		// marker attributes
-		marker.header.frame_id = "/map";
-		marker.header.stamp = rclcpp::Clock().now();
+		// top_bb attributes
+		top_bb.header.frame_id = vertical_edges.header.frame_id = "/map";
+		top_bb.header.stamp = vertical_edges.header.stamp = rclcpp::Clock().now();
 
-		marker.ns = "basic_shape";
-		marker.id = 0;
+		top_bb.ns = "top";
+		vertical_edges.ns = "side";
+		top_bb.id =	vertical_edges.id = 0;
 
-		marker.type = visualization_msgs::msg::Marker::LINE_STRIP;
-		marker.action = visualization_msgs::msg::Marker::ADD;
+		top_bb.type = visualization_msgs::msg::Marker::LINE_STRIP;
+		vertical_edges.type = visualization_msgs::msg::Marker::LINE_LIST;
 
-		marker.pose.orientation.w = 1.0;
+		top_bb.action = top_bb.action = visualization_msgs::msg::Marker::ADD;
 
-		marker.scale.x = 0.01f;
+		top_bb.pose.orientation.w = vertical_edges.pose.orientation.w = 1.0;
 
-		marker.color.r = std::rand()%10 / 10.0;
-		marker.color.g = std::rand()%10 / 10.0;
-		marker.color.b = std::rand()%10 / 10.0;
-		marker.color.a = 1.0;   // Don't forget to set the alpha!
+		top_bb.scale.x = vertical_edges.scale.x = 0.01f;
+
+		top_bb.color.r = 1.0;
+		vertical_edges.color.g = 1.0;
+		//top_bb.color.g = std::rand()%10 / 10.0;
+		//top_bb.color.b = std::rand()%10 / 10.0;
+		top_bb.color.a = vertical_edges.color.a = 1.0;   // Don't forget to set the alpha!
 
 		for (uint32_t i=0; i < 8; i+=2){
 			geometry_msgs::msg::Point p;
@@ -55,14 +60,19 @@ public:
 			p.z = 1.0;
 			RCLCPP_INFO(this->get_logger(), "%d %f %f", i, p.x, p.y);
 
-			marker.points.push_back(p);
+			top_bb.points.push_back(p);
+			vertical_edges.points.push_back(p);
+			p.z = 0.0;
+			vertical_edges.points.push_back(p);
 		}
 
-		marker.points.push_back(marker.points[0]);
+		top_bb.points.push_back(top_bb.points[0]);
 
-		marker.lifetime = rclcpp::Duration::from_nanoseconds(0);
+		top_bb.lifetime = rclcpp::Duration::from_nanoseconds(0);
+		vertical_edges.lifetime = rclcpp::Duration::from_nanoseconds(0);
 
-		this->publisher_->publish(marker);
+		this->publisher_->publish(top_bb);
+		this->publisher_->publish(vertical_edges);
 		response->status = "Box Generated";
 	}
 private:
@@ -76,5 +86,3 @@ int main(int argc, char * argv[]){
 	rclcpp::shutdown();
 	return 0;
 }
-
-
