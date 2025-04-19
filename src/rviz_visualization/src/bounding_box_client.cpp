@@ -21,8 +21,27 @@ int main(int argc, char * argv[]){
 
 	auto request = std::make_shared<interfaces::srv::Box::Request>();
 	// putting the caputed args in the request array, using first 8 as input is first 8 x,y coordinates
-	for (int i = 0; i < 8; i++)
-		request->coords.push_back(atoll(argv[i + 1])); // +1 as argv starts from 1
+	// temporary setting the class and detected objects manually
+	request->objects = 4;
+	request->class_id = {0, 1, 2, 1};
+	request->coords = {1.0, 1.0, 
+	1.0, 2.0,
+	2.0, 2.0,
+	2.0, 1.0, // first box
+	-1.0, -1.0,
+	-1.0, -2.0,
+	-2.0, -2.0,
+	-2.0, -1.0, // second box
+	3.0, 3.0,
+	3.0, 4.0,
+	4.0, 4.0,
+	4.0, 3.0, // third box
+	-3.0, -3.0,
+	-3.0, -4.0,
+	-4.0, -4.0,
+	-4.0, -3.0}; // fourth box
+//	for (int i = 0; i < argc; i++)
+//		request->coords.push_back(atoll(argv[i + 1])); // +1 as argv starts from 1
 
 	auto result_future = client->async_send_request(request);
 	if (rclcpp::spin_until_future_complete(node, result_future) != rclcpp::FutureReturnCode::SUCCESS)
