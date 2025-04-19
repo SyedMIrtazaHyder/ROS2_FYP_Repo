@@ -1,4 +1,5 @@
 build/
 log/
 install/
-ouster-ros/
+.venv/
+ouster/
