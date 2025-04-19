@@ -9,9 +9,10 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(visualization_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 add_executable(bounding_box src/bounding_box.cpp)
-target_link_libraries(bounding_box PUBLIC rclcpp::rclcpp ${visualization_msgs_TARGETS})
+target_link_libraries(bounding_box PUBLIC rclcpp::rclcpp ${visualization_msgs_TARGETS} ${geometry_msgs_TARGET})
 
 install(TARGETS
 		bounding_box

@@ -2,6 +2,9 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "visualization_msgs/msg/marker.hpp"
+#include "geometry_msgs/msg/point.hpp"
+
+// reference: http://wiki.ros.org/rviz/Tutorials/Markers%3A%20Points%20and%20Lines
 
 using namespace std::chrono_literals;
 
@@ -23,25 +26,28 @@ public:
 				marker.ns = "basic_shape";
 				marker.id = 0;
 
-				marker.type = visualization_msgs::msg::Marker::SPHERE;
+				marker.type = visualization_msgs::msg::Marker::LINE_STRIP;
 				marker.action = visualization_msgs::msg::Marker::ADD;
 
-				marker.pose.position.x = std::rand()%5;
-				marker.pose.position.y = std::rand()%5;
-				marker.pose.position.z = std::rand()%5;
-				marker.pose.orientation.x = 0.0;
-				marker.pose.orientation.y = 0.0;
-				marker.pose.orientation.z = 0.0;
 				marker.pose.orientation.w = 1.0;
 
-				marker.scale.x = std::rand()%10 / 20.0;
-				marker.scale.y = std::rand()%10 / 20.0;
-				marker.scale.z = std::rand()%10 / 20.0;
+				marker.scale.x = 0.01f;
 
 				marker.color.r = std::rand()%10 / 10.0;
 				marker.color.g = std::rand()%10 / 10.0;
 				marker.color.b = std::rand()%10 / 10.0;
 				marker.color.a = 1.0;   // Don't forget to set the alpha!
+
+				for (uint32_t i=0; i < 4; i++){
+					geometry_msgs::msg::Point p;
+					p.x = std::rand()%5 / 10.0;
+					p.y = std::rand()%5 / 10.0;
+					p.z = 1.0;
+
+					marker.points.push_back(p);
+				}
+
+				marker.points.push_back(marker.points[0]);
 
 				marker.lifetime = rclcpp::Duration::from_nanoseconds(0);
 
