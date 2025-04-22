@@ -25,6 +25,7 @@ setup(
         'console_scripts': [
             'bev_server = bev_py.make_pcap_bev_video_server:main',
             'pcap_to_bev = bev_py.make_pcap_bev_video_client:main',
+            'publish_bev = bev_py.rviz_with_bev:main',
         ],
     },
 )
