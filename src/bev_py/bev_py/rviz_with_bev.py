@@ -1,7 +1,6 @@
 import sys
 import cv2
 import rclpy
-import time
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
@@ -12,7 +11,7 @@ class PublishBEV(Node):
         self.video = cv2.VideoCapture(video_path)
 
         self.pub_bev = self.create_publisher(Image, 'bev_image', 10)
-        timer_period = 0.4 # for 10 Hz
+        timer_period = 0.1 # for 10 Hz
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
         self.br = CvBridge()
@@ -21,7 +20,6 @@ class PublishBEV(Node):
         res, frame = self.video.read()
         if res == True:
             self.pub_bev.publish(self.br.cv2_to_imgmsg(frame))
-
 
 def main():
   
