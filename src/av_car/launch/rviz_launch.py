@@ -9,9 +9,9 @@ def generate_launch_description():
     ld = LaunchDescription()
     av_car = FindPackageShare('av_car')
 
-    rviz_config = DeclareLaunchArgument('rviz_config', default_value='base_config.rviz',
+    rviz_config_arg = DeclareLaunchArgument('rviz_config', default_value='base_config.rviz',
                                          description="The base file loaded by rviz upon initialization")
-    use_sim_time = DeclareLaunchArgument('use_sim_time', default_value='false',
+    use_sim_time_arg = DeclareLaunchArgument('use_sim_time', default_value='false',
                                   description="Use Gazebo sim time when true")
 
     # Launching rviz node
@@ -34,8 +34,8 @@ def generate_launch_description():
     #             'use_sim_time': LaunchConfiguration('use_sim_time')}]
     #        )
 
-    ld.add_action(rviz_config)
-    ld.add_action(use_sim_time)
+    ld.add_action(rviz_config_arg)
+    ld.add_action(use_sim_time_arg)
     ld.add_action(rviz2)
     #ld.add_action(robot_state_publisher)
     return ld
