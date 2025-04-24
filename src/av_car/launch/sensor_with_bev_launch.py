@@ -1,5 +1,6 @@
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, ExecuteProcess
+from launch.conditions import LaunchConfigurationEquals, LaunchConfigurationNotEquals
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import PathJoinSubstitution, LaunchConfiguration
 
@@ -13,11 +14,17 @@ def generate_launch_description():
     bev_py = FindPackageShare('bev_py')
     ouster_ros = FindPackageShare('ouster_ros')
 
-    metadata_file_arg = DeclareLaunchArgument('metadata', default_value='metadata/ouster_metadata.json')
+    sensor_metadata_file_arg = DeclareLaunchArgument('sensor_metadata', default_value='')
+    pcap_metadata_file_arg = DeclareLaunchArgument('pcap_metadata', default_value='')
+    sensor_arg = DeclareLaunchArgument('sensor', default_value='true')
+    pcap_file_arg = DeclareLaunchArgument('pcap_file', default_value='')
 
     rviz_config = LaunchConfiguration('rviz_config', default='ouster_rviz_with_bev.rviz')
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
-    metadata = LaunchConfiguration('metadata', default='metadata/ouster_metadata.json')
+    sensor_metadata = LaunchConfiguration('sensor_metadata', default='metadata/ouster_metadata.json')
+
+    pcap_metadata = LaunchConfiguration('pcap_metadata')
+    pcap_file = LaunchConfiguration('pcap_file')
 
 
     params_file_path = PathJoinSubstitution([av_car, 'config', 'ouster_params.yaml'])
@@ -30,25 +37,38 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(
                 PathJoinSubstitution([ouster_ros, 'launch', 'driver.launch.py']),
                 ),
-            launch_arguments={'params_file': params_file, 'viz': ouster_rviz_enable}.items()
+            launch_arguments={'params_file': params_file, 'viz': ouster_rviz_enable}.items(),
+            condition=LaunchConfigurationEquals('sensor', 'true')
             )
 
+    # Launching the PCAP -> ROSBAG NODE
+    pcap_launch = ExecuteProcess(
+        cmd = [['ros2 launch ouster_ros replay_pcap.launch.xml viz:=false pcap_file:=', pcap_file, ' metadata:=', pcap_metadata]],
+        shell=True,
+        condition=LaunchConfigurationEquals('sensor', 'false')
+    )
+
+    # Launching Rviz
     rviz2 = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                PathJoinSubstitution([av_car, 'launch', 'rviz_launch.py']),
-                ),
-            launch_arguments={'rviz_config': rviz_config, 'use_sim_time': use_sim_time}.items()
-            )
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution([av_car, 'launch', 'rviz_launch.py'])
+        ),
+        launch_arguments={'rviz_config': rviz_config, 'use_sim_time': use_sim_time}.items()
+    )
 
     # Launching the live_bev node
     live_bev = Node(
         package = 'bev_py',
         executable = 'live_bev',
-        arguments = [metadata],
+        arguments = [sensor_metadata],
     )
 
-    ld.add_action(metadata_file_arg)
+    ld.add_action(sensor_metadata_file_arg)
+    ld.add_action(pcap_metadata_file_arg)
+    ld.add_action(sensor_arg)
+    ld.add_action(pcap_file_arg)
     ld.add_action(ouster_sensor)
     ld.add_action(rviz2)
+    ld.add_action(pcap_launch)
     ld.add_action(live_bev)
     return ld
