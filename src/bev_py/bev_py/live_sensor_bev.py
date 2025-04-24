@@ -22,8 +22,8 @@ class LiveBEV(Node):
     def __init__(self, metadata):
         super().__init__('sensor_bev_v1')
         self.boundary = {
-            "minX": 0,
-            "maxX": 50,
+            "minX": -25,
+            "maxX": 25,
             "minY": -25,
             "maxY": 25,
             "minZ": -1.73,
@@ -53,12 +53,12 @@ class LiveBEV(Node):
         #xyz = self.xyz_LUT(scan.field(client.ChanField.RANGE))
         # Try to change this to /ouster/points to remove the LUT issue
         # https://github.com/ouster-lidar/ouster-ros/issues/250
-        range_img = self.br.imgmsg_to_cv2(range)
+        #range_img = self.br.imgmsg_to_cv2(range)
         sig_img = self.br.imgmsg_to_cv2(sig)
-        xyz = self.xyz_LUT(range_img)
+        #xyz = self.xyz_LUT(range_img)
         #self.get_logger().info("LUT xyz_shape: %s" % (str(xyz.shape)))
         #self.get_logger().info("type: %s" % type(xyz))
-        #xyz = np.array([[*point] for point in point_cloud2.read_points(points, field_names=['x', 'y', 'z'])], dtype=np.float32).reshape(1024, 64, 3).transpose(1,0,2)
+        xyz = np.array([[*point] for point in point_cloud2.read_points(points, field_names=['x', 'y', 'z'])], dtype=np.float32).reshape(1024, 64, 3).transpose(1,0,2)
 
         #self.get_logger().info("xyz_value: %s" % (str(xyz.shape)))
         sig_img = cv.normalize(sig_img, None, alpha=0, beta=1, norm_type=cv.NORM_MINMAX)
@@ -68,8 +68,8 @@ class LiveBEV(Node):
         bev = self.makeBVFeature(xyzi, self.DISCRETIZATION, self.boundary)
         bev = (bev * 255).astype(np.uint8)
         bev = np.transpose(bev, (1, 2, 0))
-        bev = cv.flip(bev, -1) # Required when using the LUT table for conversion 
-        #bev = np.vstack((bev[304:], bev[:304])) # for getting a more centered point cloud
+        #bev = cv.flip(bev, -1) # Required when using the LUT table for conversion 
+        bev = np.vstack((bev[304:], bev[:304])) # for getting a more centered point cloud
         self.bev_publisher.publish(self.br.cv2_to_imgmsg(bev))
     
     def callback(self):

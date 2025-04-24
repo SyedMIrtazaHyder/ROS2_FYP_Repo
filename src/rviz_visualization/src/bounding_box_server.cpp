@@ -17,12 +17,13 @@ using namespace std::chrono_literals;
 class BoundingBox : public rclcpp::Node
 {
 public:
-	BoundingBox() : Node("bounding_box")
+	BoundingBox(const std::string& frame) : Node("bounding_box")
 	{
 		publisher_ = this->create_publisher<visualization_msgs::msg::Marker>("box", 5);
 		service_ = this->create_service<interfaces::srv::Box>("visualize_box",
 				std::bind(&BoundingBox::box_generator, this, std::placeholders::_1, std::placeholders::_2));
 				// where _1 shows the request arg and _2 shows the response args
+		this->frame = frame;
 	}
 	
 	void box_generator(const std::shared_ptr<interfaces::srv::Box::Request> request,
@@ -38,7 +39,7 @@ public:
 			auto vertical_edges = visualization_msgs::msg::Marker();
 
 			// top_bb attributes
-			top_bb.header.frame_id = vertical_edges.header.frame_id = "/map";
+			top_bb.header.frame_id = vertical_edges.header.frame_id = this->frame;
 			top_bb.header.stamp = vertical_edges.header.stamp = rclcpp::Clock().now();
 
 			top_bb.ns = "top";
@@ -107,11 +108,12 @@ public:
 private:
 	rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr publisher_;
 	rclcpp::Service<interfaces::srv::Box>::SharedPtr service_;
+	std::string frame;
 };
 
 int main(int argc, char * argv[]){
 	rclcpp::init(argc, argv);
-	rclcpp::spin(std::make_shared<BoundingBox>());
+	rclcpp::spin(std::make_shared<BoundingBox>(argv[1]));
 	rclcpp::shutdown();
 	return 0;
 }
