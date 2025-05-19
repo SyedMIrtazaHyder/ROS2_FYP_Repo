@@ -6,3 +6,4 @@ __pycache__/
 pcap/
 bag_file/
 ouster/
+videos/

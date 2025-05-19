@@ -30,9 +30,10 @@ public:
 						std::shared_ptr<interfaces::srv::Box::Response> response){
 		// The ros message is structed in the following way:
 		// objects: contains the total number of objects detected in one frame
-		// class: an array containing each objects detection class (0 -> Pedestrian, 1-> Bike, 2 -> Car)
+		// class: an array containing each objects detection class (0 -> Car, 1-> Pedestrian, 2 -> Cycle)
 		// coords: a reshaped array of 8*objects which contains the four xy coordinates of the bounding box i.e. (x1, y1, x2, y2, x3, y3, x4, y4) for each object
 		int8_t objects = request->objects;
+		float height;
 		for (int8_t detection = 0; detection < objects; detection++)
 		{
 			auto top_bb = visualization_msgs::msg::Marker();
@@ -53,30 +54,41 @@ public:
 
 			top_bb.pose.orientation.w = vertical_edges.pose.orientation.w = 1.0;
 
-			top_bb.scale.x = vertical_edges.scale.x = 0.01f;
+			top_bb.scale.x = vertical_edges.scale.x = 0.1f;
 
 			// Bounding box colored based on its class
-			// Pedestrian(0) = Red, Bike(1) = Green and Car(2) = Blue
+			// Car(0) = Blue, Pedestrian(1) = Cyan, Bike(2) = White
 			switch (request->class_id[detection])
 			{
 				case 0:
-					top_bb.color.r = 1.0;
-					vertical_edges.color.r = 1.0;
+					top_bb.color.b = 1.0;
+					vertical_edges.color.b = 1.0;
+					height = 1.88; //5-6 feet height for car
 					break;
 
 				case 1:
 					top_bb.color.g = 1.0;
 					vertical_edges.color.g = 1.0;
+					top_bb.color.b = 1.0;
+					vertical_edges.color.b = 1.0;
+					height = 1.5; //5 feet for human
 					break;
 
 				case 2:
+					top_bb.color.r = 1.0;
+					vertical_edges.color.r = 1.0;
+					top_bb.color.g = 1.0;
+					vertical_edges.color.g = 1.0;
 					top_bb.color.b = 1.0;
 					vertical_edges.color.b = 1.0;
+					height = 1.88; //5 feet for cyclist
 					break;
 
 				default:
 					top_bb.color.r = 0.0;
 					vertical_edges.color.r = 0.0;
+					height = 1;
+					break;
 					break;
 
 			}
@@ -86,8 +98,8 @@ public:
 				geometry_msgs::msg::Point p;
 				p.x = request->coords[i];
 				p.y = request->coords[i+1];
-				p.z = 1.0;
-				RCLCPP_INFO(this->get_logger(), "%d %d %f %f", detection, i, p.x, p.y);
+				p.z = static_cast<float>(height);
+				//RCLCPP_INFO(this->get_logger(), "%d %d %f %f", detection, i, p.x, p.y);
 
 				top_bb.points.push_back(p);
 				vertical_edges.points.push_back(p);

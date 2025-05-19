@@ -171,8 +171,8 @@
         "timestamp_mode": "TIME_FROM_INTERNAL_OSC",
         "udp_dest": "169.254.1.5",
         "udp_ip": "169.254.1.5",
-        "udp_port_imu": 53904,
-        "udp_port_lidar": 44220
+        "udp_port_imu": 55838,
+        "udp_port_lidar": 35905
     },
     "imu_intrinsics": 
     {

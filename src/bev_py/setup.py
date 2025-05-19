@@ -27,6 +27,9 @@ setup(
             'pcap_to_bev = bev_py.make_pcap_bev_video_client:main',
             'publish_bev = bev_py.rviz_with_bev:main',
             'live_bev = bev_py.live_sensor_bev:main',
+            'gazebo_bev = bev_py.gazebo_sensor_bev:main',
+            'dl_model = bev_py.make_bounding_box:main',
+            'record_avi = bev_py.record_bev_video:main',
         ],
     },
 )

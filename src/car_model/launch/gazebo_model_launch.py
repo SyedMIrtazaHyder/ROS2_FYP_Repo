@@ -9,6 +9,7 @@ from launch_ros.substitutions import FindPackageShare
 def generate_launch_description():
     ld = LaunchDescription()
     car_model = FindPackageShare('car_model')
+    bev_py = FindPackageShare('bev_py')
 
 
     # Launching the rviz file with the model
@@ -51,8 +52,19 @@ def generate_launch_description():
             output='screen'
             )
 
+    # Launching ros_ign_bridge
+    gz_bev = Node(
+            package="bev_py",
+            executable="gazebo_bev",
+            name="bev_conversion",
+            #arguments=['/joint_states@sensor_msgs/msg/JointState[ignition.msgs.Model'],
+            #arguments=['--ros-args', '-p', 'config_file:=/home/user/AV/src/car_model/config/ros_gz_bridge.yaml'],
+            output='screen'
+            )
+
     ld.add_action(rviz_urdf_launch)
     ld.add_action(ign_gz_launch)
     ld.add_action(spawn_robot)
     ld.add_action(gz_bridge)
+    ld.add_action(gz_bev)
     return ld

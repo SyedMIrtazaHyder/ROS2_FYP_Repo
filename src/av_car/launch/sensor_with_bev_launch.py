@@ -63,6 +63,25 @@ def generate_launch_description():
         arguments = [sensor_metadata],
     )
 
+    #model_inference = Node(
+    #    package = 'bev_py',
+    #    executable = 'dl_model',
+    #)
+
+    # Launching the bounding box generator node
+    bounding_box = Node(
+        package = 'rviz_visualization',
+        executable = 'bounding_box_server',
+        arguments = ['/os_lidar'],
+    )
+
+    bev_record = Node(
+        package="bev_py",
+        executable="record_avi",
+        name="bev_recorder",
+        condition=LaunchConfigurationEquals('sensor', 'false')
+    )
+
     ld.add_action(sensor_metadata_file_arg)
     ld.add_action(pcap_metadata_file_arg)
     ld.add_action(sensor_arg)
@@ -71,4 +90,7 @@ def generate_launch_description():
     ld.add_action(rviz2)
     ld.add_action(pcap_launch)
     ld.add_action(live_bev)
+    ld.add_action(bounding_box)
+    ld.add_action(bev_record)
+    #ld.add_action(model_inference)
     return ld
