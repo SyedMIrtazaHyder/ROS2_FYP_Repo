@@ -6,3 +6,5 @@ ouster/
 *.bag/
 src/car_model/meshes/
 videos/
+bag_file/
+recordings/

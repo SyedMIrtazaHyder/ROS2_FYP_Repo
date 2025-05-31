@@ -56,6 +56,7 @@ class LiveBEV(Node):
         range_img = self.br.imgmsg_to_cv2(range)
         sig_img = self.br.imgmsg_to_cv2(sig)
         xyz = self.xyz_LUT(range_img)
+        #xyz[..., :2] *= 4
         #self.get_logger().info("LUT xyz_shape: %s" % (str(xyz.shape)))
         #self.get_logger().info("type: %s" % type(xyz))
         #xyz = np.array([[*point] for point in point_cloud2.read_points(points, field_names=['x', 'y', 'z'])], dtype=np.float32).reshape(1024, 64, 3).transpose(1,0,2)
