@@ -66,34 +66,39 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>file://<urdf-string></uri>
-      <name>vehicle_blue</name>
-      <pose>-3.8e-05 0 -0.009387 0 0.011764 0</pose>
+      <uri>file:///home/user/AV/install/car_model/share/car_model/meshes/hatchback</uri>
+      <name>hatchback</name>
+      <pose>-1.92042 8.24729 0 0 0 -3.12141</pose>
     </include>
     <include>
-      <uri>file:///root/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
-      <name>casual_female</name>
-      <pose>0.584814 -3.58771 0 0 -0 0</pose>
+      <uri>file:///home/user/AV/install/car_model/share/car_model/meshes/hatchback</uri>
+      <name>hatchback_1</name>
+      <pose>2.53561 8.32447 0 0 -0 -3.12141</pose>
     </include>
     <include>
-      <uri>file:///root/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
-      <name>casual_female_0</name>
-      <pose>-1.36391 -2.35887 0 0 -0 0</pose>
+      <uri>file:///home/user/AV/install/car_model/share/car_model/meshes/hatchback</uri>
+      <name>hatchback_2</name>
+      <pose>12.2481 8.44288 0 0 0 -3.12141</pose>
     </include>
     <include>
-      <uri>file:///root/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
-      <name>casual_female_1</name>
-      <pose>-3.24455 -3.34843 0 0 -0 0</pose>
+      <uri>file:///home/user/AV/install/car_model/share/car_model/meshes/hatchback</uri>
+      <name>hatchback_3</name>
+      <pose>19.2593 8.83384 0 0 -0 -3.12141</pose>
     </include>
     <include>
-      <uri>file:///root/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
-      <name>hatchback_blue</name>
-      <pose>-3.27167 3.96359 0 0 -0 0</pose>
+      <uri>file:///home/user/AV/install/car_model/share/car_model/meshes/hatchback</uri>
+      <name>hatchback_4</name>
+      <pose>21.4176 -4.91691 0 0 -0 -3.12141</pose>
     </include>
     <include>
-      <uri>file:///root/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/hatchback blue/5</uri>
-      <name>hatchback_blue_0</name>
-      <pose>-4.36219 -5.78522 0 0 -0 0</pose>
+      <uri>file:///home/user/AV/install/car_model/share/car_model/meshes/hatchback</uri>
+      <name>hatchback_5</name>
+      <pose>29.968 9.29915 0 0 -0 -3.12141</pose>
+    </include>
+    <include>
+      <uri>file:///home/user/AV/install/car_model/share/car_model/meshes/hatchback</uri>
+      <name>hatchback_6</name>
+      <pose>40.0423 9.75502 0 0 -0 -3.12141</pose>
     </include>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 -0 0</pose>

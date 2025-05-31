@@ -1,0 +1,81 @@
+<sdf version='1.9'>
+  <world name='actors'>
+    <plugin name='gz::sim::systems::Physics' filename='ignition-gazebo-physics-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='ignition-gazebo-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin name='gz::sim::systems::UserCommands' filename='ignition-gazebo-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='ignition-gazebo-scene-broadcaster-system'/>
+
+    <actor name='walking_man'>
+      <pose>0 0 0 0 0 0</pose>
+      <skin>
+        <filename>https://fuel.gazebosim.org/1.0/mingfei/models/actor/1/files/meshes/walk.dae</filename>
+        <scale>1</scale>
+      </skin>
+      <script>
+        <loop>true</loop>
+        <delay_start>1</delay_start>
+        <auto_start>true</auto_start>
+		<trajectory id="0" type="walk" tension="0.6">
+			<waypoint>
+				<time>0</time>
+				<pose>10.0 5.0 1.0 0 0 -1.57</pose>
+			</waypoint>
+			<waypoint>
+				<time>15</time>
+				<pose>10.0 -5.0 1.0 0 0 -1.57</pose>
+			</waypoint>
+			<waypoint>
+				<time>18</time>
+				<pose>10.0 -5.0 1.0 0 0 1.57</pose>
+			</waypoint>
+			<waypoint>
+				<time>33</time>
+				<pose>10.0 5.0 1.0 0 0 1.57</pose>
+			</waypoint>
+		</trajectory>
+      </script>
+    </actor>
+
+	<light type="directional" name="sun">
+		<cast_shadows>true</cast_shadows>
+		<pose>0 0 10 0 0 0</pose>
+		<diffuse>0.8 0.8 0.8 1</diffuse>
+		<specular>0.2 0.2 0.2 1</specular>
+		<attenuation>
+			<range>1000</range>
+			<constant>0.9</constant>
+			<linear>0.01</linear>
+			<quadratic>0.001</quadratic>
+		</attenuation>
+		<direction>-0.5 0.1 -0.9</direction>
+	</light>
+
+	<model name="ground_plane">
+		<static>true</static>
+		<link name="link">
+		<collision name="collision">
+			<geometry>
+				<plane>
+					<normal>0 0 1</normal>
+				</plane>
+			</geometry>
+		</collision>
+		<visual name="visual">
+			<geometry>
+				<plane>
+					<normal>0 0 1</normal>
+					<size>100 100</size>
+				</plane>
+			</geometry>
+			<material>
+				<ambient>0.8 0.8 0.8 1</ambient>
+				<diffuse>0.8 0.8 0.8 1</diffuse>
+				<specular>0.8 0.8 0.8 1</specular>
+			</material>
+		</visual>
+		</link>
+	</model>
+	</world>
+</sdf>

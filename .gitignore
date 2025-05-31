@@ -3,3 +3,6 @@ log/
 install/
 .venv/
 ouster/
+*.bag/
+src/car_model/meshes/
+videos/

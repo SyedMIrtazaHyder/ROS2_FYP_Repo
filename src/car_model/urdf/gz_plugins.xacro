@@ -35,8 +35,6 @@
 			<joint_name>front_right_wheel_joint</joint_name>
 			<joint_name>rear_left_wheel_joint</joint_name>
 			<joint_name>rear_right_wheel_joint</joint_name>
-			<joint_name>lidar_joint</joint_name>
-			<joint_name>imu_joint</joint_name>
 		</plugin>
 	</gazebo>
 
@@ -66,13 +64,13 @@
 		  <lidar>
 			<scan>
 			  <horizontal>
-				  <samples>512</samples>
+				  <samples>1024</samples>
 				  <resolution>1</resolution>
 				  <min_angle>-3.141592654</min_angle>
 				  <max_angle>3.141592654</max_angle>
 			  </horizontal>
 			  <vertical>
-				  <samples>16</samples>
+				  <samples>64</samples>
 				  <resolution>1</resolution>
 				  <min_angle>-0.2897256658</min_angle>
 				  <max_angle>0.2897256658</max_angle>

@@ -1,6 +1,7 @@
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, ExecuteProcess
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.conditions import LaunchConfigurationNotEquals, LaunchConfigurationEquals
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, TextSubstitution
 
 from launch_ros.actions import Node
@@ -9,6 +10,7 @@ from launch_ros.substitutions import FindPackageShare
 def generate_launch_description():
     ld = LaunchDescription()
     car_model = FindPackageShare('car_model')
+    bev_py = FindPackageShare('bev_py')
 
 
     # Launching the rviz file with the model
@@ -16,6 +18,14 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     rviz_config = LaunchConfiguration('rviz_config', default='lidar_config.rviz')
     launch_jsb = LaunchConfiguration('launch_jsb', default='true')
+    record = LaunchConfiguration('record', default='false')
+    bag_file = LaunchConfiguration('bag_file')
+
+    bag_file_arg = DeclareLaunchArgument('bag_file', default_value="",
+                                        description="Name of the bag file")
+
+    record_arg = DeclareLaunchArgument('record', default_value="",
+                                        description="To record the bev image to later send to Xavier for processing")
 
     rviz_urdf_launch = IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
@@ -25,7 +35,7 @@ def generate_launch_description():
             )
 
     # Launching an empty gazebo gui and server
-    world = LaunchConfiguration('world', default='test_world.sdf')
+    world = LaunchConfiguration('world', default='empty.sdf')
 
     ign_gz_launch = IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
@@ -52,8 +62,33 @@ def generate_launch_description():
             output='screen'
             )
 
+    # Generating bev image
+    bev_image = Node(
+            package="bev_py",
+            executable="gazebo_bev",
+            name="bev_image"
+            )
+
+    bev_record = Node(
+            package="bev_py",
+            executable="record_avi",
+            name="bev_recorder",
+            condition=LaunchConfigurationEquals('record', 'true')
+            )
+
+    rosbag2 = ExecuteProcess(
+        cmd=[['ros2 bag record -ao ', bag_file]],
+        condition=LaunchConfigurationNotEquals('bag_file', ''),
+        shell=True
+    )
+
+    ld.add_action(bag_file_arg)
+    ld.add_action(record_arg)
     ld.add_action(rviz_urdf_launch)
     ld.add_action(ign_gz_launch)
     ld.add_action(spawn_robot)
     ld.add_action(gz_bridge)
+    ld.add_action(bev_image)
+    ld.add_action(bev_record)
+    ld.add_action(rosbag2)
     return ld

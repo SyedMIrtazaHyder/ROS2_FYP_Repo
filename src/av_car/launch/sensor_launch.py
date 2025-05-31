@@ -3,20 +3,20 @@ from launch.actions import IncludeLaunchDescription, SetLaunchConfiguration
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import PathJoinSubstitution, LaunchConfiguration
 
-from launch_ros.substitutions import FindPackageShared
+from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     ld = LaunchDescription()
 
-    av_car = FindPackageShared('av_car')
-    oustser_ros = FindPackageShared('ouster_ros')
+    av_car = FindPackageShare('av_car')
+    ouster_ros = FindPackageShare('ouster_ros')
 
-    params_file_path = PathJoinSubtitution([av_car, 'config', 'ouster_params.yaml'])
+    params_file_path = PathJoinSubstitution([av_car, 'config', 'ouster_params.yaml'])
     params_file = LaunchConfiguration('params_file', default=params_file_path)
     rviz_config = LaunchConfiguration('rviz_config', default='ouster_rviz.rviz')
 
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
-    ouster_rviz_enable = LaunchConfiguration('viz', default_value='False')
+    ouster_rviz_enable = LaunchConfiguration('viz', default='false')
 
     # Launching the ouster sensors, disabling rviz that is launched when we use ouster_snesor
     ouster_sensor = IncludeLaunchDescription(
@@ -36,4 +36,5 @@ def generate_launch_description():
 
     ld.add_action(ouster_sensor)
     ld.add_action(rviz2)
+    return ld
 
