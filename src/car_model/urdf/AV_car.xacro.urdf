@@ -239,7 +239,7 @@
 	</link>
 
 	<!-- IMU -->
-	<joint name="imu_joint" type="continuous">
+	<joint name="imu_joint" type="fixed">
 		<parent link="chassis_link" />
 		<axis xyz="0 0 1" />
 		<child link="imu_link" />
@@ -254,9 +254,9 @@
 	</link>
 
 	<!-- LiDAR -->
-	<joint name="lidar_joint" type="continuous">
-		<origin xyz="-0.05 0 1.305" />
-		<axis xyz="0 0 1" />
+	<joint name="lidar_joint" type="fixed">
+		<origin xyz="-0.05 0 1.38" />
+		<!-- <axis xyz="0 0 1" /> -->
 		<parent link="chassis_link" />
 		<child link="lidar_link" />
 	</joint>

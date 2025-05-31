@@ -1,0 +1,5 @@
+uint8 objects
+uint8[] class_id
+float32[] coords
+---
+string status
